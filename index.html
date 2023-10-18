@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>File Download & Unity WebGL</title>
+  <title>Video Game Design Club Games</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,19 +12,15 @@
     </div>
     <div class="content">
       <button id="downloadButton" class="download-button">Download Windows Version</button>
+      <a href="./WebGLBuilds/CookieClimber/index.html">
+        <button id="webglButton" class="download-button">Play Browser Version</button>
+      </a>
     </div>
 
     <div class="unity-game">
       <div id="unityContainer" style="width: 960px; height: 590px; margin: auto"></div>
     </div>
   </div>
-
-  <!-- Unity Loader Script -->
-  <script src="WebGLBuilds/CookieClimber/Build/UnityLoader.js"></script>
-  <script>
-    var gameInstance = UnityLoader.instantiate("unityContainer", "WebGLBuilds/CookieClimber/Build/Build.json", {onProgress: UnityProgress});
-  </script>
-
   <script src="script.js"></script>
 </body>
 </html>
