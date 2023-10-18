@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>File Download & Unity WebGL</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Download CookieClimber.zip & Play the Demo</h1>
+    </div>
+    <div class="content">
+      <p>Welcome! Click the button below to download the CookieClimber game.</p>
+      <button id="downloadButton" class="download-button">Download File</button>
+    </div>
+
+    <div class="unity-game">
+      <div id="unityContainer" style="width: 960px; height: 590px; margin: auto"></div>
+    </div>
+  </div>
+
+  <!-- Unity Loader Script -->
+  <script src="WebGLBuilds/CookieClimber/Build/UnityLoader.js"></script>
+  <script>
+    var gameInstance = UnityLoader.instantiate("unityContainer", "WebGLBuilds/CookieClimber/Build/Build.json", {onProgress: UnityProgress});
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>
